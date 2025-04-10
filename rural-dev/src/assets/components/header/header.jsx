@@ -15,7 +15,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../../../utils/firebase"; 
+import { auth } from "../../../utils/firebase";
 import { useNavigate } from "react-router-dom";
 
 const navigation = [
@@ -86,7 +86,7 @@ export default function Header() {
                     aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       item.current
-                        ? "bg-[#1f375d] text-white hover:bg-[#addfde] hover:text-black"
+                        ? "text-white hover:bg-[#addfde] hover:text-black"
                         : "text-white hover:bg-[#addfde] hover:text-black",
                       "rounded-md px-3 py-2 text-sm font-medium"
                     )}
@@ -126,10 +126,18 @@ export default function Header() {
                   <>
                     <MenuItem>
                       <a
-                        href="#"
+                        href="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Your Profile
+                      </a>
+                    </MenuItem>
+                    <MenuItem>
+                      <a
+                        href="/logs"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        Your logs
                       </a>
                     </MenuItem>
                     <MenuItem>
